@@ -1,6 +1,7 @@
 import { use, useState } from "react";
 import type { Itechnology } from "../../types/technology";
 import TechGrid from "./TechGrid";
+import YourStack from "./YourStack";
 
 interface ITechSectionProps {
   techPromise: Promise<Itechnology[]>;
@@ -23,6 +24,11 @@ const TechSection = ({ techPromise }: ITechSectionProps) => {
         <div className="xl:col-span-3">
           <TechGrid
             technologies={technologies}
+            
+          />
+        </div>
+        <div className="xl:col-span-1">
+          <YourStack
             
           />
         </div>
