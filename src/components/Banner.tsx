@@ -3,7 +3,7 @@ import BannerStack from "../assets/banner-stack.png";
 const Banner = () => {
   return (
     <div className="container mx-auto grid grid-cols-1 items-center gap-10 px-4 py-16 md:grid-cols-2 md:py-24">
-      {/* Text content */}
+     
       <div>
         <h1 className="text-4xl font-extrabold leading-tight md:text-5xl">
           Build Your Ideal
@@ -27,7 +27,7 @@ const Banner = () => {
         </div>
       </div>
 
-      {/* Banner image */}
+     
       <div className="flex justify-center md:justify-end">
         <img
           src={BannerStack}

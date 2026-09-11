@@ -1,9 +1,9 @@
 import { Suspense, useState } from "react";
 import Banner from "./components/Banner";
-
 import Nav from "./components/Nav";
 import TechSection from "./components/tech/TechSection";
 import type { Itechnology } from "./types/technology";
+import Footer from "./components/Footer";
 
 const technologiesFetch = async (): Promise<Itechnology[]> => {
   const res = await fetch("/data.json");
@@ -27,7 +27,7 @@ function App() {
       >
         <TechSection techPromise={technologiesPromise} />
       </Suspense>
-      
+      <Footer />
     </>
   );
 }
