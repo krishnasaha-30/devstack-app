@@ -9,7 +9,7 @@ interface ITechSectionProps {
 
 const TechSection = ({ techPromise }: ITechSectionProps) => {
   const technologies = use(techPromise);
- 
+  const [selectedStack, setSelectedStack] = useState<Itechnology[]>([]);
 
   return (
     <section id="technologies" className="container mx-auto px-4 py-16">
@@ -24,20 +24,18 @@ const TechSection = ({ techPromise }: ITechSectionProps) => {
         <div className="xl:col-span-3">
           <TechGrid
             technologies={technologies}
-            
+            selectedStack={selectedStack}
+            setSelectedStack={setSelectedStack}
           />
         </div>
+
         <div className="xl:col-span-1">
           <YourStack
-            
+            selectedStack={selectedStack}
+            setSelectedStack={setSelectedStack}
           />
         </div>
-
-        
       </div>
-
-      
-      
     </section>
   );
 };

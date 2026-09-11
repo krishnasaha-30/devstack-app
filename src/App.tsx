@@ -1,9 +1,9 @@
-import './App.css'
-import Nav from "./components/Nav";
-import Banner from "./components/Banner";
-import type { Itechnology } from "./types/technology";
 import { Suspense, useState } from "react";
+import Banner from "./components/Banner";
+
+import Nav from "./components/Nav";
 import TechSection from "./components/tech/TechSection";
+import type { Itechnology } from "./types/technology";
 
 const technologiesFetch = async (): Promise<Itechnology[]> => {
   const res = await fetch("/data.json");
@@ -11,9 +11,9 @@ const technologiesFetch = async (): Promise<Itechnology[]> => {
   return data;
 };
 
-
 function App() {
- const [technologiesPromise] = useState(() => technologiesFetch());
+  const [technologiesPromise] = useState(() => technologiesFetch());
+
   return (
     <>
       <Nav />
@@ -29,15 +29,7 @@ function App() {
       </Suspense>
       
     </>
-  )
+  );
 }
 
-export default App
-
-
-// git init
-// git add README.md
-// git commit -m "first commit"
-// git branch -M main
-// git remote add origin https://github.com/krishnasaha-30/devstack-app.git
-// git push -u origin main
+export default App;
